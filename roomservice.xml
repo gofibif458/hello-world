@@ -1,4 +1,8 @@
-[url=https://github.com/LineageOS/android_kernel_samsung_msm8226]kernel[/url]
-[url=https://github.com/LineageOS/android_device_samsung_msm8226-common]common[/url] [B]WIP[/B]
-[url=https://github.com/S3NEO/android_device_samsung_kmini3g]device[/url] [B]WIP[/B]
-[url=https://github.com/S3NEO/android_vendor_samsung_kmini3g]vendor[/url] [B]WIP[/B]
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest>
+  <!-- Device Trees -->
+  <project name="S3NEO/android_device_samsung_kmini3g" path="device/samsung/kmini3g" remote="github" revision="lineage-18.1" />
+  <project name="LineageOS/android_kernel_samsung_msm8226" path="kernel/samsung/msm8226" remote="github" revision="lineage-18.1" />
+  <project name="S3NEO/android_vendor_samsung_kmini3g" path="vendor/samsung" remote="github" revision="lineage-18.1"/>
+  <project name="LineageOS/android_device_samsung_msm8226-common" path="device/qcom/common" remote="github" revision="lineage-18.1" />
+</manifest>
