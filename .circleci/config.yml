@@ -4,39 +4,7 @@ jobs:
     docker:
       - image: ubuntu:18.04
     steps:
-      - checkout
-      - run: apt update
-      - run: apt upgrade
-      - run: apt -y install wget bc bison build-essential ccache curl flex g++-multilib gcc-multilib git gnupg gperf imagemagick lib32ncurses5-dev lib32readline-dev lib32z1-dev liblz4-tool libncurses5 libncurses5-dev libsdl1.2-dev libssl-dev libxml2 libxml2-utils lzop pngcrush rsync schedtool squashfs-tools xsltproc zip zlib1g-dev libwxgtk3.0-dev
-      - run: mkdir -p ~/bin
-      - run: mkdir -p ~/android/lineage
-      - run: curl https://storage.googleapis.com/git-repo-downloads/repo > ~/bin/repo
-      - run: chmod a+x ~/bin/repo
-      - run: git config --global user.email "you@example.com"
-      - run: git config --global user.name "Your Name"
-      - run: export USE_CCACHE=1
-      - run: export CCACHE_EXEC=/usr/bin/ccache
-      - run: ccache -M 50G
-      - run: ccache -o compression=true
-      - run: cd ~/android/lineage
-      - run: python3 ~/bin/repo init -u https://github.com/LineageOS/android.git -b lineage-18.1
-      - run: python3 ~/bin/repo sync -j 4
-      - run: cd .repo/local_manifests
-      - run: wget https://raw.githubusercontent.com/gofibif458/hello-world/main/roomservice.xml
-      - run: cd ~/android/lineage
-      - run: python3 ~/bin/repo sync -j 4
-      - run: source build/envsetup.sh
-      - run: breakfast kmini3g
-      - run: croot
-      - run: brunch kmini3g
-      - run: cd $OUT
-      - persist_to_workspace:
-          # Must be an absolute path, or relative path from working_directory
-          root: $OUT
-          # Must be relative path from root
-          paths:
-            - recovery.img
-            - lineage-18.1-20211202-unofficial-kmini3g.zip
+      - run: echo "Hello World!"
 workflows:
   version: 2
   one_and_two:
